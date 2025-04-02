@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gợi ý giải bài tập Toán</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .exercise-container {
+            margin: 20px 0;
+        }
+        .exercise-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .exercise-button:hover {
+            background-color: #45a049;
+        }
+        .hint-container {
+            display: none;
+            background-color: #fff;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hint-step {
+            display: none;
+            margin: 10px 0;
+        }
+        .next-hint-button {
+            background-color: #008CBA;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .next-hint-button:hover {
+            background-color: #007bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gợi ý giải bài tập Toán</h1>
+
+    <!-- Bài 1 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise1')">Bài 1</button>
+        <div id="exercise1" class="hint-container">
+            <h3>Bài 1: Tam giác ABC với A(1; 4), B(0; 1), C(4; 3)</h3>
+            <h4>a) Lập phương trình tổng quát của đường thẳng BC</h4>
+            <div id="exercise1a-step1" class="hint-step">
+                <p>Bước 1: Xác định tọa độ hai điểm B và C. Ta có B(0; 1) và C(4; 3).</p>
+            </div>
+            <div id="exercise1a-step2" class="hint-step">
+                <p>Bước 2: Tính vectơ chỉ phương của đường thẳng BC: \(\vec{BC} = (4 - 0; 3 - 1) = (4; 2)\). Vectơ pháp tuyến của đường thẳng sẽ là \((-2; 4)\).</p>
+            </div>
+            <div id="exercise1a-step3" class="hint-step">
+                <p>Bước 3: Phương trình tổng quát của đường thẳng qua B(0; 1) với vectơ pháp tuyến \((-2; 4)\): \(-2(x - 0) + 4(y - 1) = 0 \implies -2x + 4y - 4 = 0 \implies x - 2y + 2 = 0\).</p>
+                <p>Kết luận: Phương trình đường thẳng BC là \(x - 2y + 2 = 0\).</p>
+            </div>
+            <h4>b) Lập phương trình tham số của đường trung tuyến AM</h4>
+            <div id="exercise1b-step1" class="hint-step">
+                <p>Bước 1: Đường trung tuyến AM đi từ A(1; 4) đến trung điểm M của cạnh BC. Tìm tọa độ M: \(M\left(\frac{0+4}{2}; \frac{1+3}{2}\right) = (2; 2)\).</p>
+            </div>
+            <div id="exercise1b-step2" class="hint-step">
+                <p>Bước 2: Tính vectơ chỉ phương của AM: \(\vec{AM} = (2 - 1; 2 - 4) = (1; -2)\).</p>
+            </div>
+            <div id="exercise1b-step3" class="hint-step">
+                <p>Bước 3: Phương trình tham số của AM đi qua A(1; 4) với vectơ chỉ phương \((1; -2)\): \(\begin{cases} x = 1 + t \\ y = 4 - 2t \end{cases}\).</p>
+            </div>
+            <h4>c) Lập phương trình tổng quát của đường cao AH</h4>
+            <div id="exercise1c-step1" class="hint-step">
+                <p>Bước 1: Đường cao AH đi từ A(1; 4) và vuông góc với BC. Từ câu a), phương trình BC: \(x - 2y + 2 = 0\), vectơ pháp tuyến của BC là \((1; -2)\), nên vectơ chỉ phương của AH là \((1; -2)\).</p>
+            </div>
+            <div id="exercise1c-step2" class="hint-step">
+                <p>Bước 2: Vectơ pháp tuyến của AH vuông góc với \((1; -2)\), nên là \((2; 1)\).</p>
+            </div>
+            <div id="exercise1c-step3" class="hint-step">
+                <p>Bước 3: Phương trình tổng quát của AH qua A(1; 4) với vectơ pháp tuyến \((2; 1)\): \(2(x - 1) + 1(y - 4) = 0 \implies 2x + y - 6 = 0\).</p>
+                <p>Kết luận: Phương trình đường cao AH là \(2x + y - 6 = 0\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise1')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 2 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise2')">Bài 2</button>
+        <div id="exercise2" class="hint-container">
+            <h3>Bài 2: Lập phương trình tổng quát của đường thẳng Δ</h3>
+            <h4>a) Δ đi qua M(3; 3) và song song với đường thẳng x + 2y – 2022 = 0</h4>
+            <div id="exercise2a-step1" class="hint-step">
+                <p>Bước 1: Đường thẳng song song với \(x + 2y - 2022 = 0\) sẽ có dạng \(x + 2y + c = 0\).</p>
+            </div>
+            <div id="exercise2a-step2" class="hint-step">
+                <p>Bước 2: Đường thẳng đi qua M(3; 3), thay vào phương trình: \(3 + 2 \cdot 3 + c = 0 \implies 9 + c = 0 \implies c = -9\).</p>
+            </div>
+            <div id="exercise2a-step3" class="hint-step">
+                <p>Bước 3: Phương trình của Δ là \(x + 2y - 9 = 0\).</p>
+            </div>
+            <h4>b) Δ đi qua N(2; –1) và vuông góc với đường thẳng 3x + 2y + 99 = 0</h4>
+            <div id="exercise2b-step1" class="hint-step">
+                <p>Bước 1: Vectơ pháp tuyến của \(3x + 2y + 99 = 0\) là \((3; 2)\). Vectơ chỉ phương của Δ vuông góc với \((3; 2)\), nên là \((-2; 3)\).</p>
+            </div>
+            <div id="exercise2b-step2" class="hint-step">
+                <p>Bước 2: Đáp án -2x + 3y + 7 = 0.</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise2')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 3 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise3')">Bài 3</button>
+        <div id="exercise3" class="hint-container">
+            <h3>Bài 3: Xét vị trí tương đối của d₁ và d₂</h3>
+            <div id="exercise3-step1" class="hint-step">
+                <p>Bước 1: Chuyển phương trình tham số của d₁ thành phương trình tổng quát: \(\begin{cases} x = 1 - t \\ y = 8 - 5t \end{cases}\). Loại \(t\): \(t = 1 - x \implies y = 8 - 5(1 - x) \implies y = 5x + 3\).</p>
+            </div>
+            <div id="exercise3-step2" class="hint-step">
+                <p>Bước 2: Phương trình tổng quát của d₁: \(5x - y + 3 = 0\). So sánh với d₂: \(5x - y + 3 = 0\). Hai phương trình giống nhau.</p>
+            </div>
+            <div id="exercise3-step3" class="hint-step">
+                <p>Bước 3: Kết luận: d₁ và d₂ trùng nhau.</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise3')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 4 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise4')">Bài 4</button>
+        <div id="exercise4" class="hint-container">
+            <h3>Bài 4: Tìm giao điểm của d và Δ</h3>
+            <div id="exercise4-step1" class="hint-step">
+                <p>Bước 1: Phương trình tham số của d: \(\begin{cases} x = 1 + t \\ y = 2 + 2t \end{cases}\). Thay vào phương trình của Δ: \(x + y - 2 = 0\).</p>
+            </div>
+            <div id="exercise4-step2" class="hint-step">
+                <p>Bước 2: \((1 + t) + (2 + 2t) - 2 = 0 \implies 1 + 2 + t + 2t - 2 = 0 \implies 3t + 1 = 0 \implies t = -\frac{1}{3}\).</p>
+            </div>
+            <div id="exercise4-step3" class="hint-step">
+                <p>Bước 3: Thay \(t = -\frac{1}{3}\) vào: \(x = 1 - \frac{1}{3} = \frac{2}{3}\), \(y = 2 + 2 \cdot (-\frac{1}{3}) = \frac{4}{3}\). Giao điểm là \(\left(\frac{2}{3}; \frac{4}{3}\right)\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise4')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 5 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise5')">Bài 5</button>
+        <div id="exercise5" class="hint-container">
+            <h3>Bài 5: Tìm số đo góc giữa d₁ và d₂</h3>
+            <div id="exercise5-step1" class="hint-step">
+                <p>Bước 1: Vectơ pháp tuyến của d₁: \(5x - 3y + 1 = 0\) là \((5; -3)\), của d₂: \(10x - 6y - 7 = 0\) là \((10; -6)\).</p>
+            </div>
+            <div id="exercise5-step2" class="hint-step">
+                <p>Bước 2: Hai vectơ pháp tuyến tỉ lệ: \((10; -6) = 2 \cdot (5; -3)\), nên hai đường thẳng song song.</p>
+            </div>
+            <div id="exercise5-step3" class="hint-step">
+                <p>Bước 3: Góc giữa hai đường thẳng song song là \(0^\circ\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise5')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 6 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise6')">Bài 6</button>
+        <div id="exercise6" class="hint-container">
+            <h3>Bài 6: Tính khoảng cách từ điểm M đến đường thẳng Δ</h3>
+            <h4>a) M(2; 3) và Δ: 8x – 6y + 7 = 0</h4>
+            <div id="exercise6a-step1" class="hint-step">
+                <p>Bước 1: Công thức khoảng cách từ điểm \(M(x_0; y_0)\) đến đường thẳng \(ax + by + c = 0\): \(d = \frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}\).</p>
+            </div>
+            <div id="exercise6a-step2" class="hint-step">
+                <p>Bước 2: Thay \(M(2; 3)\) vào: \(|8 \cdot 2 - 6 \cdot 3 + 7| = |16 - 18 + 7| = 5\), mẫu số: \(\sqrt{8^2 + (-6)^2} = \sqrt{100} = 10\).</p>
+            </div>
+            <div id="exercise6a-step3" class="hint-step">
+                <p>Bước 3: Khoảng cách: \(d = \frac{5}{10} = \frac{1}{2}\).</p>
+            </div>
+            <h4>b) M(4; 9) và Δ: x – 25 = 0</h4>
+            <div id="exercise6b-step1" class="hint-step">
+                <p>Bước 1: Phương trình \(x - 25 = 0 \implies x = 25\), là đường thẳng song song với trục Oy.</p>
+            </div>
+            <div id="exercise6b-step2" class="hint-step">
+                <p>Bước 2: Khoảng cách từ M(4; 9) đến \(x = 25\) là khoảng cách theo trục Ox: \(|4 - 25| = 21\).</p>
+            </div>
+            <div id="exercise6b-step3" class="hint-step">
+                <p>Bước 3: Khoảng cách: \(d = 21\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise6')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 7 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise7')">Bài 7</button>
+        <div id="exercise7" class="hint-container">
+            <h3>Bài 7: Xác định phương trình đường tròn</h3>
+            <div id="exercise7-step1" class="hint-step">
+                <p>Bước 1: Phương trình đường tròn có dạng \(x^2 + y^2 + Dx + Ey + F = 0\), với hệ số của \(x^2\) và \(y^2\) bằng nhau và khác 0.</p>
+            </div>
+            <div id="exercise7-step2" class="hint-step">
+                <p>Bước 2: Kiểm tra từng phương trình:  
+                a) \(x^2 + y^2 + 2x + 2y - 9 = 0\): Hệ số \(x^2\) và \(y^2\) đều là 1, là đường tròn.  
+                b) \(x^2 + y^2 - 6x - 2y + 1 = 0\): Là đường tròn.  
+                c) \(x^2 + y^2 + 8x + 4y + 2022 = 0\): Là đường tròn.  
+                d) \(3x^2 + 2y^2 + 5x + 7y - 1 = 0\): Hệ số \(x^2\) và \(y^2\) khác nhau, không phải đường tròn.</p>
+            </div>
+            <div id="exercise7-step3" class="hint-step">
+                <p>Bước 3: Tìm tâm và bán kính:  
+                a) \(x^2 + y^2 + 2x + 2y - 9 = 0 \implies (x + 1)^2 + (y + 1)^2 = 11\), tâm \((-1; -1)\), bán kính \(\sqrt{11}\).  
+                b) \(x^2 + y^2 - 6x - 2y + 1 = 0 \implies (x - 3)^2 + (y - 1)^2 = 9\), tâm \((3; 1)\), bán kính \(3\).  
+                c) \(x^2 + y^2 + 8x + 4y + 2022 = 0 \implies (x + 4)^2 + (y + 2)^2 = -2002\), không có nghiệm thực, không phải đường tròn thực.</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise7')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 8 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise8')">Bài 8</button>
+        <div id="exercise8" class="hint-container">
+            <h3>Bài 8: Lập phương trình đường tròn (C)</h3>
+            <h4>a) (C) có tâm O(0; 0) và bán kính R = 9</h4>
+            <div id="exercise8a-step1" class="hint-step">
+                <p>Bước 1: Phương trình đường tròn tâm \((h; k)\), bán kính \(R\): \((x - h)^2 + (y - k)^2 = R^2\).</p>
+            </div>
+            <div id="exercise8a-step2" class="hint-step">
+                <p>Bước 2: Thay \(O(0; 0)\), \(R = 9\): \(x^2 + y^2 = 81\).</p>
+            </div>
+            <h4>b) (C) có đường kính AB với A(1; 1) và B(3; 5)</h4>
+            <div id="exercise8b-step1" class="hint-step">
+                <p>Bước 1: Tâm là trung điểm AB: \(\left(\frac{1+3}{2}; \frac{1+5}{2}\right) = (2; 3)\).</p>
+            </div>
+            <div id="exercise8b-step2" class="hint-step">
+                <p>Bước 2: Bán kính là nửa độ dài AB: \(AB = \sqrt{(3-1)^2 + (5-1)^2} = \sqrt{20} \implies R = \sqrt{5}\).</p>
+            </div>
+            <div id="exercise8b-step3" class="hint-step">
+                <p>Bước 3: Phương trình: \((x - 2)^2 + (y - 3)^2 = 5\).</p>
+            </div>
+            <h4>c) (C) có tâm M(2; 3) và tiếp xúc với đường thẳng 3x - 4y + 9 = 0</h4>
+            <div id="exercise8c-step1" class="hint-step">
+                <p>Bước 1: Bán kính là khoảng cách từ M(2; 3) đến đường thẳng: \(R = \frac{|3 \cdot 2 - 4 \cdot 3 + 9|}{\sqrt{3^2 + (-4)^2}} = \frac{3}{5}\).</p>
+            </div>
+            <div id="exercise8c-step2" class="hint-step">
+                <p>Bước 2: Phương trình: \((x - 2)^2 + (y - 3)^2 = \left(\frac{3}{5}\right)^2 \implies (x - 2)^2 + (y - 3)^2 = \frac{9}{25}\).</p>
+            </div>
+            <h4>d) (C) có tâm I(3; 2) và đi qua điểm B(7; 4)</h4>
+            <div id="exercise8d-step1" class="hint-step">
+                <p>Bước 1: Bán kính là khoảng cách từ I(3; 2) đến B(7; 4): \(R = \sqrt{(7-3)^2 + (4-2)^2} = \sqrt{20} = 2\sqrt{5}\).</p>
+            </div>
+            <div id="exercise8d-step2" class="hint-step">
+                <p>Bước 2: Phương trình: \((x - 3)^2 + (y - 2)^2 = (2\sqrt{5})^2 \implies (x - 3)^2 + (y - 2)^2 = 20\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise8')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 9 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise9')">Bài 9</button>
+        <div id="exercise9" class="hint-container">
+            <h3>Bài 9: Lập phương trình đường tròn ngoại tiếp tam giác</h3>
+            <h4>a) A(1; 4), B(0; 1), C(4; 3)</h4>
+            <div id="exercise9a-step1" class="hint-step">
+                <p>Bước 1: Đường tròn ngoại tiếp đi qua 3 đỉnh, tâm là giao điểm của hai đường trung trực. Trung trực AB: \(x = \frac{1+0}{2} = 0.5\), phương trình: \(x = 0.5\).</p>
+            </div>
+            <div id="exercise9a-step2" class="hint-step">
+                <p>Bước 2: Trung trực BC: \(x - 2y + 2 = 0\) (từ Bài 1a). Giao điểm: \(0.5 - 2y + 2 = 0 \implies y = 1.25\), tâm \((0.5; 1.25)\).</p>
+            </div>
+            <div id="exercise9a-step3" class="hint-step">
+                <p>Bước 3: Bán kính: Khoảng cách từ tâm đến A: \(R = \sqrt{(0.5-1)^2 + (1.25-4)^2} = \frac{5\sqrt{5}}{4}\). Phương trình: \((x - 0.5)^2 + (y - 1.25)^2 = \left(\frac{5\sqrt{5}}{4}\right)^2\).</p>
+            </div>
+            <h4>b) O(0; 0), P(16; 0), R(0; 12)</h4>
+            <div id="exercise9b-step1" class="hint-step">
+                <p>Bước 1: Trung trực OP: \(x = 8\). Trung trực OR: \(y = 6\).</p>
+            </div>
+            <div id="exercise9b-step2" class="hint-step">
+                <p>Bước 2: Tâm là giao điểm: \((8; 6)\). Bán kính: Khoảng cách từ tâm đến O: \(R = \sqrt{8^2 + 6^2} = 10\).</p>
+            </div>
+            <div id="exercise9b-step3" class="hint-step">
+                <p>Bước 3: Phương trình: \((x - 8)^2 + (y - 6)^2 = 100\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise9')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 10 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise10')">Bài 10</button>
+        <div id="exercise10" class="hint-container">
+            <h3>Bài 10: Lập phương trình đường tròn tiếp xúc Ox, Oy và đi qua A(2; 1)</h3>
+            <div id="exercise10-step1" class="hint-step">
+                <p>Bước 1: Đường tròn tiếp xúc với Ox và Oy, tâm có dạng \((R; R)\). Phương trình: \((x - R)^2 + (y - R)^2 = R^2\).</p>
+            </div>
+            <div id="exercise10-step2" class="hint-step">
+                <p>Bước 2: Đường tròn đi qua A(2; 1): \((2 - R)^2 + (1 - R)^2 = R^2 \implies 4 - 4R + R^2 + 1 - 2R + R^2 = R^2 \implies R^2 - 6R + 5 = 0 \implies R = 1\) hoặc \(R = 5\).</p>
+            </div>
+            <div id="exercise10-step3" class="hint-step">
+                <p>Bước 3: Với \(R = 1\): \((x - 1)^2 + (y - 1)^2 = 1\). Với \(R = 5\): \((x - 5)^2 + (y - 5)^2 = 25\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise10')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 11 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise11')">Bài 11</button>
+        <div id="exercise11" class="hint-container">
+            <h3>Bài 11: Đường tròn (C): \(x^2 + y^2 - 6x - 2y - 15 = 0\)</h3>
+            <h4>a) Chứng minh A(0; 5) thuộc (C)</h4>
+            <div id="exercise11a-step1" class="hint-step">
+                <p>Bước 1: Thay A(0; 5) vào phương trình (C): \(0^2 + 5^2 - 6 \cdot 0 - 2 \cdot 5 - 15 = 25 - 10 - 15 = 0\).</p>
+            </div>
+            <div id="exercise11a-step2" class="hint-step">
+                <p>Bước 2: Kết luận: A(0; 5) thỏa mãn phương trình (C), nên A thuộc (C).</p>
+            </div>
+            <h4>b) Viết phương trình tiếp tuyến với (C) tại A(0; 5)</h4>
+            <div id="exercise11b-step1" class="hint-step">
+                <p>Bước 1: Tìm tâm I của (C): \((x^2 - 6x) + (y^2 - 2y) = 15 \implies (x - 3)^2 + (y - 1)^2 = 25\). Tâm I(3; 1).</p>
+            </div>
+            <div id="exercise11b-step2" class="hint-step">
+                <p>Bước 2: Vectơ pháp tuyến của tiếp tuyến là \(\vec{IA} = (0 - 3; 5 - 1) = (-3; 4)\).</p>
+            </div>
+            <div id="exercise11b-step3" class="hint-step">
+                <p>Bước 3: Phương trình tiếp tuyến: \(-3(x - 0) + 4(y - 5) = 0 \implies -3x + 4y - 20 = 0\).</p>
+            </div>
+            <h4>c) Viết phương trình tiếp tuyến với (C) song song với đường thẳng 8x + 6y + 99 = 0</h4>
+            <div id="exercise11c-step1" class="hint-step">
+                <p>Bước 1: Tiếp tuyến song song với \(8x + 6y + 99 = 0\) có dạng \(8x + 6y + c = 0\).</p>
+            </div>
+            <div id="exercise11c-step2" class="hint-step">
+                <p>Bước 2: Khoảng cách từ tâm I(3; 1) đến tiếp tuyến bằng bán kính \(R = 5\): \(\frac{|8 \cdot 3 + 6 \cdot 1 + c|}{\sqrt{8^2 + 6^2}} = 5 \implies |30 + c| = 50\).</p>
+            </div>
+            <div id="exercise11c-step3" class="hint-step">
+                <p>Bước 3: Giải: \(c = 20\) hoặc \(c = -80\). Phương trình tiếp tuyến: \(8x + 6y + 20 = 0\) hoặc \(8x + 6y - 80 = 0\).</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise11')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- Bài 12 -->
+    <div class="exercise-container">
+        <button class="exercise-button" onclick="showHints('exercise12')">Bài 12</button>
+        <div id="exercise12" class="hint-container">
+            <h3>Bài 12: Cổng hình bán nguyệt</h3>
+            <h4>a) Viết phương trình mô phỏng cổng</h4>
+            <div id="exercise12a-step1" class="hint-step">
+                <p>Bước 1: Cổng rộng 6.8 m, cao 3.4 m, nửa đường tròn có bán kính \(R = \frac{6.8}{2} = 3.4\) m.</p>
+            </div>
+            <div id="exercise12a-step2" class="hint-step">
+                <p>Bước 2: Chọn hệ trục tọa độ với gốc tại chân cổng, trục Ox nằm ngang, trục Oy thẳng đứng. Phương trình nửa đường tròn: \(x^2 + (y - 3.4)^2 = 3.4^2\) với \(y \geq 0\).</p>
+            </div>
+            <h4>b) Kiểm tra xe tải có đi qua được không</h4>
+            <div id="exercise12b-step1" class="hint-step">
+                <p>Bước 1: Xe rộng 2.4 m, cao 2.5 m. Giả sử xe đi chính giữa, chiều rộng còn lại mỗi bên: \(\frac{6.8 - 2.4}{2} = 2.2\) m.</p>
+            </div>
+            <div id="exercise12b-step2" class="hint-step">
+                <p>Bước 2: Tính độ cao cổng tại \(x = 1.2\) m (nửa chiều rộng xe): \(y = 3.4 - \sqrt{3.4^2 - 1.2^2} \approx 3.4 - 3.18 = 0.22\) m.</p>
+            </div>
+            <div id="exercise12b-step3" class="hint-step">
+                <p>Bước 3: Chiều cao xe (2.5 m) lớn hơn chiều cao cổng tại vị trí này (0.22 m), nên xe **không** thể đi qua.</p>
+            </div>
+            <button class="next-hint-button" onclick="nextHint('exercise12')">Xem gợi ý tiếp theo</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Hiển thị container gợi ý khi nhấn nút bài tập
+        function showHints(exerciseId) {
+            const hintContainer = document.getElementById(exerciseId);
+            if (hintContainer.style.display === "block") {
+                hintContainer.style.display = "none";
+            } else {
+                hintContainer.style.display = "block";
+            }
+        }
+
+        // Hiển thị gợi ý tiếp theo
+        function nextHint(exerciseId) {
+            const hintSteps = document.querySelectorAll(`#${exerciseId} .hint-step`);
+            for (let i = 0; i < hintSteps.length; i++) {
+                if (hintSteps[i].style.display === "none") {
+                    hintSteps[i].style.display = "block";
+                    break; // Chỉ hiển thị gợi ý đầu tiên chưa được hiển thị
+                }
+            }
+        }
+
+        // Khởi tạo: Ẩn tất cả các gợi ý
+        document.addEventListener("DOMContentLoaded", function() {
+            const hintSteps = document.querySelectorAll('.hint-step');
+            hintSteps.forEach(step => {
+                step.style.display = "none"; // Ẩn tất cả các bước gợi ý
+            });
+        });
+    </script>
+</body>
+</html>
